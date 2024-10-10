@@ -59,7 +59,7 @@
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1148px) {
   .task-item {
     justify-content: space-between;
     margin-right: 10px;

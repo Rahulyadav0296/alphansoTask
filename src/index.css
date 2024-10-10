@@ -10,13 +10,31 @@ body {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  margin: 40px 300px;
+  margin: 40px auto; /* Center the container and remove fixed margin */
+  max-width: 600px; /* Limit max width for larger screens */
+  width: 90%; /* Set width to 90% for responsiveness */
+}
+
+@media (max-width: 1148px) {
+  .search-container {
+    width: 100%;
+    border-radius: 30px;
+  }
 }
 
 @media (max-width: 768px) {
+  /* Mobile devices */
   .search-container {
-    width: 90%;
-    margin: 5px 0px;
-    border-radius: 30px;
+    width: 95%; /* Increase width to 95% for smaller screens */
+    margin: 20px auto; /* Reduce margin for mobile */
+    padding: 12px; /* Slightly decrease padding */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small devices */
+  .search-container {
+    width: 100%; /* Use full width on very small screens */
+    padding: 10px; /* Reduce padding further */
   }
 }

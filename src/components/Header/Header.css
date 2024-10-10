@@ -51,7 +51,7 @@
   background-color: grey;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1168px) {
   .search-form {
     width: 100%;
   }

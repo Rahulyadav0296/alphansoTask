@@ -62,24 +62,25 @@
   background-color: rgb(84, 187, 84); /* Background color on hover */
 }
 
-@media (max-width: 640px) {
+/* Tablet and Smaller Laptops */
+@media (max-width: 1148px) {
   .search-header-container {
-    display: flex;
     flex-direction: column;
     text-align: left;
-    align-items: flex-start; /* Align items to the left */
-    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 12px;
   }
 
   .header-title {
     font-size: 20px;
-    text-align: left; /* Ensure title is left aligned */
-    margin-bottom: 20px; /* Add spacing below the title */
+    text-align: left;
+    margin-bottom: 20px;
   }
 
   .search-input-container {
-    margin-left: 0; /* Adjust margin for smaller screens */
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .search-input-header {
@@ -87,7 +88,6 @@
   }
 
   .button-group {
-    display: flex;
     flex-direction: row;
     margin-top: 20px;
   }
@@ -95,5 +95,67 @@
   .filter-button {
     margin: 0 2px;
     font-size: 14px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .search-header-container {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center; /* Center-align items for better layout */
+  }
+
+  .header-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .search-input-container {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .button-group {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .filter-button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices (Mobile, Small Phones) */
+@media (max-width: 480px) {
+  .search-header-container {
+    padding: 8px;
+  }
+
+  .header-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .search-input-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .filter-button {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 12px;
+    padding: 8px 10px;
   }
 }
