@@ -3,7 +3,13 @@ import { TodoContext } from "../utils/TodoContext";
 import "./Header.css";
 
 const Header: React.FC = () => {
-  const { search, setSearch, setTasks, tasks } = useContext(TodoContext);
+  const todoContext = useContext(TodoContext);
+
+  if (!todoContext) {
+    // Handle the case where context is undefined, e.g., return an error or fallback UI
+    return null;
+  }
+  const { search, setSearch, setTasks, tasks } = todoContext;
 
   useEffect(() => {
     const storedTasks = localStorage.getItem("tasks");

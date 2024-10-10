@@ -2,7 +2,13 @@ import { useContext, useState } from "react";
 import { TodoContext } from "../../../utils/TodoContext";
 
 function Buttons() {
-  const { tasks, setFilterTasks } = useContext(TodoContext);
+  const todoContext = useContext(TodoContext);
+
+  if (!todoContext) {
+    // Handle the case where context is undefined, e.g., return an error or fallback UI
+    return null;
+  }
+  const { tasks, setFilterTasks } = todoContext;
   const [activeFilter, setActiveFilter] = useState("all");
 
   const handleAll = () => {

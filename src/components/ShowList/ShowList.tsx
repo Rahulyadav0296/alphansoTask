@@ -3,8 +3,13 @@ import { TodoContext } from "../utils/TodoContext";
 import "./ShowList.css";
 
 function ShowList() {
-  const { tasks, filterTasks, setFilterTasks, setTasks } =
-    useContext(TodoContext);
+  const todoContext = useContext(TodoContext);
+
+  if (!todoContext) {
+    // Handle the case where context is undefined, e.g., return an error or fallback UI
+    return null;
+  }
+  const { tasks, filterTasks, setFilterTasks, setTasks } = todoContext;
 
   useEffect(() => {
     setFilterTasks(tasks);

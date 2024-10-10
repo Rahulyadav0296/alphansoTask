@@ -4,8 +4,13 @@ import Buttons from "./Buttons/Buttons";
 import "./SearchHeader.css";
 
 function SearchHeader() {
-  const { inputSearch, setInputSearch, tasks, setFilterTasks } =
-    useContext(TodoContext);
+  const todoContext = useContext(TodoContext);
+
+  if (!todoContext) {
+    // Handle the case where context is undefined, e.g., return an error or fallback UI
+    return null;
+  }
+  const { inputSearch, setInputSearch, tasks, setFilterTasks } = todoContext;
 
   const handleSearchInput = () => {
     const searchItems = tasks.filter((task: any) =>

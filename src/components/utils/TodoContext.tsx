@@ -18,10 +18,6 @@ interface TodoContextType {
   setCompleted: React.Dispatch<React.SetStateAction<Task[]>>;
   filterTasks: Task[];
   setFilterTasks: React.Dispatch<React.SetStateAction<Task[]>>;
-  isMarked: boolean;
-  setIsMarked: React.Dispatch<React.SetStateAction<boolean>>;
-  id: number[];
-  setId: React.Dispatch<React.SetStateAction<number[]>>;
 }
 
 export const TodoContext = createContext<TodoContextType | undefined>(
@@ -38,7 +34,6 @@ export const TodoProvider: React.FC<TodoProviderTypes> = ({ children }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [filterTasks, setFilterTasks] = useState<Task[]>([]);
   const [completed, setCompleted] = useState<Task[]>([]);
-  const [markedId, setMarkedId] = useState<Task[]>([]);
 
   return (
     <TodoContext.Provider
@@ -49,8 +44,6 @@ export const TodoProvider: React.FC<TodoProviderTypes> = ({ children }) => {
         setTasks,
         inputSearch,
         setInputSearch,
-        markedId,
-        setMarkedId,
         filterTasks,
         setFilterTasks,
         completed,
