@@ -1,0 +1,71 @@
+/* General styles */
+.task-list {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border: 1px solid rgb(179, 177, 177);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-list-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.marked {
+  background-color: #e0f4e0;
+}
+
+.mark-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mark-btn i {
+  color: #333;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.marked .mark-btn i {
+  color: #28a745;
+}
+
+.task-desc {
+  flex: 1;
+  margin-left: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.delete-btn i {
+  color: grey;
+  font-size: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .task-item {
+    justify-content: space-between;
+    margin-right: 10px;
+  }
+
+  .task-desc {
+    margin: 10px 0;
+  }
+}

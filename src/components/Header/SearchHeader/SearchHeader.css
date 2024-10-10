@@ -1,0 +1,99 @@
+.search-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  background-color: white;
+  border: none;
+  margin-bottom: 16px;
+}
+
+.header-title {
+  font-size: 24px;
+  margin-right: 20px;
+  flex: 1; /* Allow title to take available space */
+  text-align: left; /* Align title to the left */
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.fa-magnifying-glass {
+  padding: 10px;
+  color: #999;
+  background-color: white;
+}
+
+.search-input-header {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around; /* Adjusts spacing between buttons */
+}
+
+.filter-button {
+  margin: 0px 5px;
+  padding: 10px 20px; /* Adjust padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+  background-color: rgb(175, 172, 172); /* Default background color */
+  color: white; /* Text color */
+}
+
+.filter-button.active {
+  background-color: green; /* Active button background color */
+}
+
+.filter-button:hover {
+  background-color: rgb(84, 187, 84); /* Background color on hover */
+}
+
+@media (max-width: 640px) {
+  .search-header-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Align items to the start */
+    padding: 12px;
+  }
+
+  .header-title {
+    font-size: 20px;
+    text-align: left; /* Ensure title is left aligned */
+    margin-bottom: 20px; /* Add spacing below the title */
+  }
+
+  .search-input-container {
+    margin-left: 0; /* Adjust margin for smaller screens */
+  }
+
+  .search-input-header {
+    font-size: 16px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .filter-button {
+    margin: 0 2px;
+    font-size: 14px;
+  }
+}
